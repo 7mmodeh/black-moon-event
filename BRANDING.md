@@ -11,4 +11,3 @@
 **Social caption:** Halloween ends. The ritual begins. BLACK MOON | القمر الأسود. 1 NOV • 3 AM • Private Villa, Bahrain. Couples only. 20 BHD per person. Limited reservations. Book via the official link.
 
 **Important:** Artwork mockup QR and domain are not functional. Add real booking URL and QR only after deployment.
-Cloudflare Pages deployment synchronization test.
