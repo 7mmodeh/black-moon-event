@@ -10,7 +10,7 @@
 - Allows one or more complimentary house guests instead of requiring even numbers.
 
 ## Critical: do not run all SQL files
-Only **one new SQL migration** is needed if your existing BLACK MOON database already has the earlier payment method, entry-capacity, Halloween and international-phone migrations installed:
+Only **one new SQL migration** is needed if your existing BLACK MOON database already has the earlier payment-method, entry-capacity, Halloween and international-phone migrations installed:
 
 `supabase/20261027_GATEKEEPER_V2.sql`
 
