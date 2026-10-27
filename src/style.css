@@ -49,3 +49,48 @@ button,a,input,select{touch-action:manipulation}a:focus-visible,button:focus-vis
 @media(max-width:900px){.topLinks{display:none}.hero{background:linear-gradient(90deg,#0a060ce8 0%,#12080dd9 42%,#0c060b8c 100%),url('/dj-villa-scene.webp') center/cover no-repeat!important}.hero>*:not(.orb):not(.moonHalo):not(.mist):not(.ghost):not(.pumpkin):not(.stars):not(.sceneGlow){max-width:90%}}
 @media(max-width:600px){.header{min-height:72px;height:auto;padding:12px 16px}.brand{font-size:22px;letter-spacing:.12em}.headerRight{gap:8px}.navlink{font-size:10px}.hero{min-height:690px!important;padding:80px 22px 50px;background:linear-gradient(180deg,#09050ac9,#0b060ce8 65%,#090609),url('/dj-villa-scene.webp') 62% top/auto 75% no-repeat!important}.hero>*:not(.orb):not(.moonHalo):not(.mist):not(.ghost):not(.pumpkin):not(.stars):not(.sceneGlow){max-width:100%}.hero h1{font-size:clamp(52px,12vw,77px);letter-spacing:.01em}.hero .eyebrow{font-size:10px}.hero .heroMeta{font-size:11px}.hero .btn.gold{width:100%;padding:15px 22px}.hero .subhead{font-size:11px}.hero h2{font-size:29px}.ghostOne{right:8%;top:7%}.ghostTwo{right:4%;bottom:8%}.ghostThree{right:22%;top:29%}.pumpkinOne{right:8%;top:25%}.pumpkinTwo{right:4%;bottom:17%}.pumpkinThree{right:48%;bottom:8%}.facts{padding:0 8px}.facts>div{padding:20px 5px}.facts strong{font-size:20px}.facts span{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.ghost,.pumpkin,.mist{animation:none!important}}
+
+/* FINAL BLACK MOON DESIGN SYSTEM */
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+.bmWordmark{display:inline-flex;flex-direction:column;align-items:center;gap:0;white-space:nowrap;direction:ltr;line-height:1.05;filter:drop-shadow(0 3px 8px #050306)}
+.bmEnglish{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(64px,8vw,142px);font-weight:700;letter-spacing:.018em;color:#fff0cb;background:linear-gradient(180deg,#fff6d8 4%,#f5c879 33%,#a84927 58%,#fff1c0 79%,#b55e33 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 13px #d5331b77)}
+.bmMoon{letter-spacing:-.025em}
+.bmArabic{font-family:Amiri,serif;font-size:clamp(29px,3.3vw,54px);font-weight:700;color:#ffb07a;text-shadow:0 0 15px #c32e1d,0 2px 3px #000}
+.bmWordmarkCompact .bmEnglish{font-size:clamp(21px,2.3vw,35px);letter-spacing:.08em}
+.bmWordmarkCompact .bmArabic{font-size:clamp(12px,1.1vw,18px);margin-top:3px}
+.header{position:relative;z-index:50;background:#09070bf0;gap:16px}
+.header .brand{display:flex;align-items:center}
+.header .topLinks{display:flex;flex-wrap:wrap;gap:clamp(10px,2vw,28px);align-items:center}
+.header .topLinks a{font-size:12px;color:#f6e4d1;transition:color .2s}
+.header .topLinks a:hover,.header .topLinks a:focus-visible{color:#ffc082}
+.hero{background:linear-gradient(90deg,rgba(7,4,9,.81) 0%,rgba(11,4,10,.52) 48%,rgba(9,4,7,.18) 100%),url('/dj-villa-scene.webp') center center/cover no-repeat!important;min-height:720px}
+.heroBrand{margin:8px 0 12px;position:relative;z-index:4!important}
+.hero .heroBrand .bmEnglish{font-size:clamp(55px,8vw,140px)}
+.hero .heroBrand .bmArabic{font-size:clamp(27px,3.3vw,55px)}
+.hero .ghost,.hero .pumpkin,.hero .mist{pointer-events:none!important}
+.hero .ghost,.hero .pumpkin{opacity:.76;filter:drop-shadow(0 0 12px #f3b47a55)}
+.guestInfoSection,.faqSection{padding:90px max(5vw,22px);background:linear-gradient(150deg,#140b12,#08070c 65%,#200e14);border-top:1px solid #a46c473d}
+.faqSection{background:linear-gradient(160deg,#0c090e,#1c0c14)}
+.infoHeading{text-align:center;max-width:750px;margin:0 auto 34px}
+.infoHeading h2{font:700 clamp(32px,4.5vw,56px)/1.2 Amiri,Georgia,serif;color:#f9dfb6;margin:8px 0}
+.infoHeading p,.guideCard p,.faqItem p,.faqContact{color:#dfc9c0;line-height:1.9}
+.guideGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:1240px;margin:0 auto}
+.guideCard{background:linear-gradient(135deg,#27121aeb,#100b11);border:1px solid #bb85535e;border-radius:14px;padding:26px;box-shadow:0 15px 35px #0004}
+.guideNumber{color:#e68b56;font-size:13px;letter-spacing:.2em}
+.guideCard h3{font-size:20px;color:#ffe1ac;margin:12px 0 5px}
+.guideCard p{font-size:14px;margin:0}
+.infoCta{display:flex!important;max-width:310px;margin:32px auto 0;justify-content:center}
+.faqList{max-width:950px;margin:0 auto;display:grid;gap:12px}
+.faqItem{background:#1a1018;border:1px solid #a8755266;border-radius:12px;overflow:hidden}
+.faqItem summary{display:flex;align-items:center;justify-content:space-between;gap:16px;cursor:pointer;padding:19px 24px;font-weight:700;color:#f9e1bf;list-style:none}
+.faqItem summary::-webkit-details-marker{display:none}
+.faqItem summary span{color:#ef9459;font-size:22px}
+.faqItem[open] summary span{transform:rotate(45deg)}
+.faqItem p{padding:0 24px 20px;margin:0}
+.faqContact{text-align:center;margin:28px auto 0}
+.ticketBrand{margin:12px auto 25px}.ticketBrand .bmEnglish{font-size:clamp(40px,6vw,70px)}.ticketBrand .bmArabic{font-size:30px}
+.ticketPanel{max-width:680px!important}.ticketQR{display:flex!important;align-items:center;justify-content:center;width:min(100%,400px);margin:25px auto;padding:22px!important;background:white!important;border:9px solid #b68447;border-radius:15px}.ticketQR svg{display:block;max-width:100%;height:auto}
+footer .bmWordmarkCompact .bmEnglish{font-size:22px}footer .bmWordmarkCompact .bmArabic{font-size:13px}
+@media(max-width:950px){.header .topLinks{display:flex;gap:10px}.header .topLinks a{font-size:10px}.guideGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.header{flex-wrap:wrap;justify-content:space-between}.header .topLinks{width:100%;order:3;justify-content:center;gap:14px;padding:6px 0}.header .topLinks a{font-size:11px}.hero{background:linear-gradient(180deg,#08050999 0%,#0b060cc4 50%,#09060cf5 100%),url('/dj-villa-scene.webp') 60% center/auto 100% no-repeat!important;min-height:740px!important}.hero .heroBrand .bmEnglish{font-size:clamp(42px,10.3vw,75px)}.hero .heroBrand .bmArabic{font-size:clamp(27px,7vw,40px)}.guideGrid{grid-template-columns:1fr}.guestInfoSection,.faqSection{padding:60px 18px}.ticketQR{padding:12px!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero .ghost,.hero .pumpkin,.hero .mist{animation:none!important}}
