@@ -94,3 +94,17 @@ footer .bmWordmarkCompact .bmEnglish{font-size:22px}footer .bmWordmarkCompact .b
 @media(max-width:950px){.header .topLinks{display:flex;gap:10px}.header .topLinks a{font-size:10px}.guideGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.header{flex-wrap:wrap;justify-content:space-between}.header .topLinks{width:100%;order:3;justify-content:center;gap:14px;padding:6px 0}.header .topLinks a{font-size:11px}.hero{background:linear-gradient(180deg,#08050999 0%,#0b060cc4 50%,#09060cf5 100%),url('/dj-villa-scene.webp') 60% center/auto 100% no-repeat!important;min-height:740px!important}.hero .heroBrand .bmEnglish{font-size:clamp(42px,10.3vw,75px)}.hero .heroBrand .bmArabic{font-size:clamp(27px,7vw,40px)}.guideGrid{grid-template-columns:1fr}.guestInfoSection,.faqSection{padding:60px 18px}.ticketQR{padding:12px!important}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero .ghost,.hero .pumpkin,.hero .mist{animation:none!important}}
+/* BLACK MOON V2 entrance console */
+.gateWorkspace{max-width:980px;margin:0 auto;padding:32px 18px 90px;min-height:70vh}
+.gateHeading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:24px}
+.gateHeading h2{margin:8px 0;font-size:clamp(1.6rem,4vw,2.5rem)}
+.gateWorkspace .panel{padding:clamp(18px,4vw,36px)}
+.gateWorkspace .entryLookup{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.gateWorkspace .entryLookup input{flex:1;min-width:190px}
+.gateCamera{width:100%;max-width:400px;margin:20px auto}
+.gateWorkspace .entryActions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0}
+.gateWorkspace .entryActions button{min-height:54px;white-space:normal;line-height:1.35}
+.gateWorkspace .entryDetails{margin-top:24px;border-top:1px solid #805d42;padding-top:20px}
+@media(max-width:600px){.gateWorkspace .entryActions{grid-template-columns:1fr}.gateHeading{align-items:flex-start}.gateWorkspace .btn{font-size:0.85rem}}
+/* Printable ticket, without site navigation and unrelated page content */
+@media print{.header,.ticketPage button,.ticketPage .fine,.inquiryFab,.chatBubble{display:none!important}.ticketPage{padding:0!important;margin:0!important;background:white!important}.ticketPanel{box-shadow:none!important;break-inside:avoid;max-width:190mm!important;margin:0 auto!important}}
