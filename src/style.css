@@ -295,3 +295,19 @@ footer .bmWordmarkCompact .bmEnglish{font-size:22px}footer .bmWordmarkCompact .b
 @keyframes bmIntroFill{to{transform:scaleX(1)}}
 @media(min-width:850px){.bmIntro{background:radial-gradient(ellipse at center,#2b1014 0%,#090508 70%)}.bmIntroVideo{filter:drop-shadow(0 0 45px #aa4c2440)}}
 @media(prefers-reduced-motion:reduce){.bmIntro,.bmIntroProgress:after{animation:none;transition:none}}
+
+
+/* BLACK MOON — no-login ticket recovery */
+.bmRecoverPage{min-height:calc(100svh - 82px);display:grid;place-items:center;padding:55px 16px 90px;background:radial-gradient(ellipse at 50% 5%,#531e2e 0%,#170b16 42%,#090609 80%)}
+.bmRecoverPanel{width:min(540px,100%);padding:clamp(25px,5vw,45px);text-align:center;border:1px solid #ba8b5e88;border-radius:20px;background:linear-gradient(150deg,#251420,#110b13 80%);box-shadow:0 22px 80px #0009}
+.bmRecoverEmblem{font:70px Georgia,serif;color:#e4b47c;line-height:1;text-shadow:0 0 40px #b65546}
+.bmRecoverPanel h1{font:700 clamp(28px,6vw,45px)/1.15 'Cormorant Garamond',Amiri,Georgia,serif;color:#f3c58a;margin:16px 0}
+.bmRecoverPanel>p{color:#e3cdbb;line-height:1.8}
+.bmRecoverPanel form{display:flex;flex-direction:column;gap:11px;text-align:start;margin:25px 0}
+.bmRecoverPanel label{font-size:13px;color:#f1d5b2}
+.bmRecoverPanel input{width:100%;min-height:50px;padding:12px 15px;border:1px solid #9b715e;border-radius:10px;background:#110c14;color:#fff4e6;font-size:16px}
+.bmRecoverPanel input:focus-visible{outline:2px solid #e5b780;outline-offset:2px}
+.bmRecoverPanel form .btn{margin-top:13px}
+.bmRecoverError{color:#ffb3b3!important;font-size:13px}
+.bmRecoverHint{font-size:12px}
+.bmRecoverBack{display:inline-block;margin-top:12px;color:#f3c58a;text-decoration:underline;text-underline-offset:5px}
