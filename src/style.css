@@ -129,3 +129,169 @@ footer .bmWordmarkCompact .bmEnglish{font-size:22px}footer .bmWordmarkCompact .b
 .v4Actions{min-width:0}.v4Actions .v4FieldLabel{margin-bottom:7px}.v4Actions select{box-sizing:border-box;max-width:100%;font-size:14px;padding:10px 12px}.v4Actions .v4Help{margin:8px 0 0;line-height:1.5}.v4Actions .v4Summary{margin:14px 0}.v4Actions .v4Summary>div{min-width:0;padding:12px}.v4Actions .v4Confirm{min-height:48px}.v4Actions .fine{font-size:11px;line-height:1.5}
 @media(max-width:680px){.v4Ticket{padding:14px 12px}.v4Actions{margin-top:16px;padding-top:8px}.v4Actions .v4SectionHead{margin:12px 0}.v4Actions .v4SectionHead h4{font-size:19px}.v4ActionModes{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0 14px}.v4ActionModes .v4ModeButton{min-height:54px;padding:9px 7px;gap:7px;font-size:12px}.v4ModeIcon{flex-basis:22px;width:22px;height:22px;font-size:12px}.v4Actions .v4Summary{gap:8px}.v4Actions .v4Summary>div{padding:10px}.v4Actions .v4Summary strong{font-size:20px}.v4Actions .v4Help{font-size:11px}.v4Actions .fine{margin-top:9px}}
 @media(max-width:360px){.v4ActionModes .v4ModeButton{font-size:11px;gap:5px}.v4ModeIcon{flex-basis:20px;width:20px;height:20px}}
+
+
+/* CURSED CLOCK — free-floating artwork; original hero and scene remain untouched */
+.bmCursed{position:relative;z-index:3;width:min(100%,520px);margin:8px auto 24px;display:grid;place-items:center;isolation:isolate}
+.bmClock{position:relative;width:min(100%,450px);aspect-ratio:1;display:grid;place-items:center}
+.bmClockAura{position:absolute;inset:5%;border-radius:50%;background:radial-gradient(circle,rgba(232,113,35,.24) 0%,rgba(130,62,21,.12) 49%,transparent 72%);filter:blur(12px);animation:bmBreath 5s ease-in-out infinite alternate}
+.bmClockWeb{position:absolute;width:115%;height:115%;inset:-7.5%;opacity:.52;pointer-events:none;filter:drop-shadow(0 0 6px #ab602b)}
+.bmClockRim{width:78%;aspect-ratio:1;border-radius:50%;padding:14px;background:conic-gradient(from 30deg,#4b2917,#e5ad64,#754222,#f5d4a0,#4a2614,#bc7b3b,#4b2917);box-shadow:0 0 0 2px #372012,0 0 0 8px #100b0a,0 0 0 10px #704323,0 0 45px rgba(205,93,31,.28),inset 0 0 12px #1a0b06;position:relative}
+.bmClockRim:before{content:"";position:absolute;inset:-23px;border-radius:50%;border:1px dashed rgba(227,174,102,.65);animation:bmOrbit 100s linear infinite;pointer-events:none}
+.bmClockFace{width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 50% 35%,#28170f,#100b0c 72%);border:2px solid #8b562b;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:17px;box-shadow:inset 0 0 35px #030204;color:#f8d6a5}
+.bmClockName{font-family:Georgia,serif;letter-spacing:.28em;font-size:clamp(10px,2.7vw,15px);color:#d7a365}
+.bmClockName span{display:block;font-size:11px;margin-top:8px}
+.bmClockValues{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:77%;gap:12px 0;position:relative}
+.bmClockValues:before,.bmClockValues:after{content:"";position:absolute;background:linear-gradient(transparent,#a66b3a,transparent);opacity:.7}
+.bmClockValues:before{height:100%;width:1px;left:50%}
+.bmClockValues:after{height:1px;width:100%;top:50%;background:linear-gradient(90deg,transparent,#a66b3a,transparent)}
+.bmClockUnit{display:flex;flex-direction:column;align-items:center;gap:3px;padding:5px 0;min-width:0}
+.bmClockUnit strong{font:normal clamp(28px,7vw,51px)/1 Georgia,serif;color:#ffca83;text-shadow:0 0 18px rgba(236,111,30,.75);font-variant-numeric:tabular-nums}
+.bmClockUnit small{font-size:clamp(9px,1.8vw,12px);letter-spacing:.12em;color:#e7c5a2}
+.bmClockFooter{font-size:clamp(8px,1.7vw,10px);letter-spacing:.18em;color:#c8945e;text-align:center}
+.bmClockSpiderThread{position:absolute;right:4%;top:-2%;height:40%;width:1px;background:linear-gradient(#b88b61,#e6c69c);transform:rotate(-7deg);transform-origin:top;animation:bmSway 6s ease-in-out infinite alternate}
+.bmClockSpider{position:absolute;bottom:-20px;left:-14px;font-size:27px;filter:sepia(1) saturate(1.4) drop-shadow(0 0 5px #c07938)}
+.bmClockWebLabel{position:absolute;bottom:1%;color:#e5b779;font:12px Georgia,serif;letter-spacing:.2em}
+.bmClockStarted{font:clamp(17px,4vw,26px) Georgia,serif;text-align:center;padding:12px;color:#ffcc85}
+@keyframes bmBreath{to{opacity:.5;transform:scale(1.07)}}
+@keyframes bmOrbit{to{transform:rotate(360deg)}}
+@keyframes bmSway{to{transform:rotate(5deg)}}
+@media(max-width:540px){.bmCursed{width:100%;margin:0 auto 14px}.bmClock{width:min(100%,370px)}.bmClockRim{padding:10px}.bmClockFace{gap:11px}.bmClockValues{gap:6px 0}.bmClockSpiderThread{right:6%;top:0}.bmClockWebLabel{bottom:0}}
+@media(prefers-reduced-motion:reduce){.bmClockAura,.bmClockRim:before,.bmClockSpiderThread{animation:none}}
+
+
+/* BLACK MOON V3.4 — consistent iOS/Android mobile header and hero lettering.
+   CSS-only: retains the original villa background, countdown and app logic. */
+@media (max-width: 650px) {
+  .header {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) auto;
+    grid-template-areas: "brand actions" "nav nav";
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 13px;
+    height: auto;
+    min-height: 0;
+    padding: 15px 16px 12px;
+    direction: rtl;
+  }
+  .header .brand {
+    grid-area: brand;
+    min-width: 0;
+    justify-self: start;
+    margin: 0;
+    direction: ltr;
+  }
+  .header .headerRight {
+    grid-area: actions;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-self: end;
+    gap: 9px;
+    min-width: 0;
+    direction: ltr;
+  }
+  .header .topLinks {
+    grid-area: nav;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 4px 0 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7px;
+    direction: rtl;
+  }
+  .header .topLinks a {
+    flex: 0 1 auto;
+    min-width: 0;
+    font-size: clamp(9px, 2.55vw, 12px);
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.5;
+    white-space: nowrap;
+    padding: 5px 0;
+  }
+  .header .languageSwitch {
+    padding: 9px 11px;
+    font-size: 12px;
+    white-space: nowrap;
+    min-height: 40px;
+  }
+  .header .navlink {
+    font-size: 10px;
+    white-space: nowrap;
+    letter-spacing: 0;
+    gap: 5px;
+  }
+  .header .bmWordmarkCompact .bmEnglish {
+    font-size: clamp(23px, 6.5vw, 29px);
+    letter-spacing: .035em;
+  }
+  .header .bmWordmarkCompact .bmArabic {
+    font-size: clamp(13px, 3.5vw, 17px);
+    margin-top: 4px;
+  }
+
+  /* On Android, clipped multi-stop text gradients can look dark/red.
+     Use the same warm-gold lettering on both mobile rendering engines. */
+  .header .bmEnglish,
+  .hero .heroBrand .bmEnglish {
+    background: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    -webkit-text-fill-color: #f3c58a !important;
+    color: #f3c58a !important;
+    filter: none !important;
+    text-shadow: 0 2px 1px #542719, 0 0 13px rgba(225,126,57,.35);
+  }
+  .hero .heroBrand {
+    width: 100%;
+    min-width: 0;
+    max-width: 100% !important;
+    overflow: visible;
+  }
+  .hero .heroBrand .bmWordmark {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .hero .heroBrand .bmEnglish {
+    font-size: clamp(37px, 10.5vw, 62px);
+    line-height: 1.08;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  .hero .heroBrand .bmArabic {
+    font-size: clamp(28px, 7.3vw, 39px);
+    line-height: 1.25;
+    color: #ffc18c;
+    text-shadow: 0 2px 13px rgba(154,49,24,.7);
+  }
+}
+@media (max-width: 360px) {
+  .header {padding-inline: 11px;column-gap: 5px}
+  .header .headerRight {gap: 5px}
+  .header .languageSwitch {padding-inline: 8px;font-size: 11px}
+  .header .topLinks {gap: 4px}
+  .header .topLinks a {font-size: 9px}
+}
+
+
+/* BLACK MOON — cinematic 8-second entrance (public homepage only) */
+.bmIntro{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#050306;overflow:hidden;isolation:isolate;opacity:1;transition:opacity .5s ease;overscroll-behavior:contain}
+.bmIntroLeaving{opacity:0;pointer-events:none}
+.bmIntroVideo{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#050306}
+.bmIntroVignette{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.42),transparent 19%,transparent 68%,rgba(0,0,0,.78)),radial-gradient(ellipse at center,transparent 48%,rgba(0,0,0,.35))}
+.bmIntroControls{position:absolute;z-index:2;top:max(18px,env(safe-area-inset-top));right:max(16px,env(safe-area-inset-right));left:max(16px,env(safe-area-inset-left));display:flex;align-items:center;justify-content:space-between;gap:12px;direction:ltr}
+.bmIntroControls button{font:700 11px Inter,Arial,sans-serif;letter-spacing:.12em;min-height:44px;padding:11px 15px;color:#ffe2ae;background:rgba(11,7,12,.75);border:1px solid rgba(235,180,108,.66);border-radius:999px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 4px 18px #0008;cursor:pointer}
+.bmIntroControls button:focus-visible{outline:2px solid #ffd6a0;outline-offset:3px}
+.bmIntroSkip span{margin-inline-start:7px;font-size:15px}
+.bmIntroBottom{position:absolute;bottom:max(22px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);width:min(300px,70vw);display:flex;flex-direction:column;align-items:center;gap:9px;color:#f3c98d;font:600 11px Georgia,serif;letter-spacing:.3em;text-shadow:0 2px 8px #000}
+.bmIntroProgress{width:100%;height:2px;background:#77513966;overflow:hidden}
+.bmIntroProgress:after{content:"";display:block;height:100%;width:100%;background:linear-gradient(90deg,#a96a39,#ffdc9b);transform:scaleX(0);transform-origin:left;animation:bmIntroFill 8s linear forwards}
+@keyframes bmIntroFill{to{transform:scaleX(1)}}
+@media(min-width:850px){.bmIntro{background:radial-gradient(ellipse at center,#2b1014 0%,#090508 70%)}.bmIntroVideo{filter:drop-shadow(0 0 45px #aa4c2440)}}
+@media(prefers-reduced-motion:reduce){.bmIntro,.bmIntroProgress:after{animation:none;transition:none}}
